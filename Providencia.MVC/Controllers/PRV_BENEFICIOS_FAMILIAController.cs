@@ -31,7 +31,6 @@ namespace Providencia.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //PRV_BENEFICIOS_FAMILIA pRV_BENEFICIOS_FAMILIA = db.PRV_BENEFICIOS_FAMILIA.Find(id);
             PRV_BENEFICIOS_FAMILIA pRV_BENEFICIOS_FAMILIA = repBeneficiosFamilia.Find(id);
             if (pRV_BENEFICIOS_FAMILIA == null)
             {
@@ -76,7 +75,6 @@ namespace Providencia.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //PRV_BENEFICIOS_FAMILIA pRV_BENEFICIOS_FAMILIA = db.PRV_BENEFICIOS_FAMILIA.Find(id);
             PRV_BENEFICIOS_FAMILIA pRV_BENEFICIOS_FAMILIA = repBeneficiosFamilia.Find(id);
             if (pRV_BENEFICIOS_FAMILIA == null)
             {
@@ -96,8 +94,6 @@ namespace Providencia.MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                //db.Entry(pRV_BENEFICIOS_FAMILIA).State = EntityState.Modified;
-                //db.SaveChanges();
                 repBeneficiosFamilia.Atualizar(pRV_BENEFICIOS_FAMILIA);
                 repBeneficiosFamilia.SalvarTodos();
                 return RedirectToAction("Index");
@@ -114,7 +110,6 @@ namespace Providencia.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            //PRV_BENEFICIOS_FAMILIA pRV_BENEFICIOS_FAMILIA = db.PRV_BENEFICIOS_FAMILIA.Find(id);
             PRV_BENEFICIOS_FAMILIA pRV_BENEFICIOS_FAMILIA = repBeneficiosFamilia.Find(id);
             if (pRV_BENEFICIOS_FAMILIA == null)
             {
@@ -128,21 +123,14 @@ namespace Providencia.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            //PRV_BENEFICIOS_FAMILIA pRV_BENEFICIOS_FAMILIA = db.PRV_BENEFICIOS_FAMILIA.Find(id);
             PRV_BENEFICIOS_FAMILIA pRV_BENEFICIOS_FAMILIA = repBeneficiosFamilia.Find(id);
-            //db.PRV_BENEFICIOS_FAMILIA.Remove(pRV_BENEFICIOS_FAMILIA);
             repBeneficiosFamilia.Excluir(bf => bf == pRV_BENEFICIOS_FAMILIA);
-            //db.SaveChanges();
             repBeneficiosFamilia.SalvarTodos();
             return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
         {
-            //if (disposing)
-            //{
-            //    db.Dispose();
-            //}
             repBeneficiosFamilia.Dispose();
             base.Dispose(disposing);
         }

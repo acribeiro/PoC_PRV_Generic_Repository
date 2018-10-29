@@ -21,7 +21,7 @@ namespace Providencia.MVC.Controllers
         public ActionResult Index()
         {
             var prv_Unidade = repUnidadeRepositorio.GetAll(u => u.PRV_NOME_UNIDADE);
-            return View(prv_Unidade.ToList());
+            return View(prv_Unidade);
         }
 
         // GET: PRV_UNIDADE/Details/5
@@ -31,7 +31,7 @@ namespace Providencia.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PRV_UNIDADE pRV_UNIDADE = db.PRV_UNIDADE.Find(id);
+            PRV_UNIDADE pRV_UNIDADE = repUnidadeRepositorio.Find(id);
             if (pRV_UNIDADE == null)
             {
                 return HttpNotFound();
@@ -54,8 +54,8 @@ namespace Providencia.MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.PRV_UNIDADE.Add(pRV_UNIDADE);
-                db.SaveChanges();
+                repUnidadeRepositorio.Adicionar(pRV_UNIDADE);
+                repUnidadeRepositorio.SalvarTodos();
                 return RedirectToAction("Index");
             }
 
@@ -69,7 +69,7 @@ namespace Providencia.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PRV_UNIDADE pRV_UNIDADE = db.PRV_UNIDADE.Find(id);
+            PRV_UNIDADE pRV_UNIDADE = repUnidadeRepositorio.Find(id);
             if (pRV_UNIDADE == null)
             {
                 return HttpNotFound();
@@ -86,8 +86,8 @@ namespace Providencia.MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.Entry(pRV_UNIDADE).State = EntityState.Modified;
-                db.SaveChanges();
+                repUnidadeRepositorio.Atualizar(pRV_UNIDADE);
+                repUnidadeRepositorio.SalvarTodos();
                 return RedirectToAction("Index");
             }
             return View(pRV_UNIDADE);
@@ -100,7 +100,7 @@ namespace Providencia.MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            PRV_UNIDADE pRV_UNIDADE = db.PRV_UNIDADE.Find(id);
+            PRV_UNIDADE pRV_UNIDADE = repUnidadeRepositorio.Find(id);
             if (pRV_UNIDADE == null)
             {
                 return HttpNotFound();
@@ -113,18 +113,15 @@ namespace Providencia.MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            PRV_UNIDADE pRV_UNIDADE = db.PRV_UNIDADE.Find(id);
-            db.PRV_UNIDADE.Remove(pRV_UNIDADE);
-            db.SaveChanges();
+            PRV_UNIDADE pRV_UNIDADE = repUnidadeRepositorio.Find(id);
+            repUnidadeRepositorio.Excluir(u => u == pRV_UNIDADE);
+            repUnidadeRepositorio.SalvarTodos();
             return RedirectToAction("Index");
         }
 
         protected override void Dispose(bool disposing)
         {
-            if (disposing)
-            {
-                db.Dispose();
-            }
+            repUnidadeRepositorio.Dispose();
             base.Dispose(disposing);
         }
     }
