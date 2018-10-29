@@ -1,0 +1,40 @@
+﻿@model Providencia.Entidades.PRV_BENEFICIOS_FAMILIA
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2></h2>
+
+<h3>Tem certeza que deseja excluir?</h3>
+<div>
+    <h4>PRV_BENEFICIOS_FAMILIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_BENEFICIOS.PRV_DESCRICAO_BENEFICIOS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_BENEFICIOS.PRV_DESCRICAO_BENEFICIOS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_CONSTITUICAO_FAMILIAR.PRV_NOME_MEMBRO_FAMILIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_CONSTITUICAO_FAMILIAR.PRV_NOME_MEMBRO_FAMILIA)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+    }
+</div>

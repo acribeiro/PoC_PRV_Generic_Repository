@@ -1,0 +1,51 @@
+﻿@model IEnumerable<Providencia.Entidades.PRV_CONSTITUICAO_FAMILIAR>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2></h2>
+
+<p>
+    @Html.ActionLink("Novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_EDUCANDO.PRV_NOME_RESPONSAVEL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_NOME_MEMBRO_FAMILIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_PARENTESCO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_PROFISSAO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_EDUCANDO.PRV_NOME_RESPONSAVEL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_NOME_MEMBRO_FAMILIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_PARENTESCO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_PROFISSAO)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.PRV_ID_CONSTITUICAO_FAMILIAR }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.PRV_ID_CONSTITUICAO_FAMILIAR }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.PRV_ID_CONSTITUICAO_FAMILIAR })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,26 @@
+﻿@model Providencia.Entidades.PRV_RENDA_FAMILIAR
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>RENDA FAMILIAR</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_DESCRICAO_RENDA_FAMILIAR)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_DESCRICAO_RENDA_FAMILIAR)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.PRV_ID_RENDA_FAMILIAR }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

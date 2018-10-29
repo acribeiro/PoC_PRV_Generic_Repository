@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Providencia.Entidades.PRV_USUARIO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_NOME_USUARIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_CPF_USUARIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_DATA_NASCIMENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_EMAIL_USUARIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_LOGIN_USUARIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_SENHA_USUARIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_CARGO_USUARIO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_SETOR_AREA_USUARIO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_NOME_USUARIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_CPF_USUARIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_DATA_NASCIMENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_EMAIL_USUARIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_LOGIN_USUARIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_SENHA_USUARIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_CARGO_USUARIO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_SETOR_AREA_USUARIO)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.PRV_ID_USUARIO }) |
+            @Html.ActionLink("Details", "Details", new { id=item.PRV_ID_USUARIO }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.PRV_ID_USUARIO })
+        </td>
+    </tr>
+}
+
+</table>

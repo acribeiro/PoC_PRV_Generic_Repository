@@ -1,0 +1,58 @@
+﻿@model Providencia.Entidades.PRV_ESCOLARIDADE_EDUCANDO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>ESCOLARIDADE DO EDUCANDO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_EDUCANDO.PRV_NOME_RESPONSAVEL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_EDUCANDO.PRV_NOME_RESPONSAVEL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_SERIE_ESCOLARIDADE_EDUCANDO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_SERIE_ESCOLARIDADE_EDUCANDO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_ENSINO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_ENSINO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_TURNO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_TURNO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_REPETINDO_SERIE_ATUAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_REPETINDO_SERIE_ATUAL)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.PRV_ID_DADOS_ESCOLARIDADE_EDUCANDO }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

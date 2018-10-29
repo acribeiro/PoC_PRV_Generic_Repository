@@ -1,0 +1,26 @@
+﻿@model Providencia.Entidades.PRV_ESTADO_CIVIL
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>ESTADO CIVIL</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_DESCRICAO_ESTADO_CIVIL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_DESCRICAO_ESTADO_CIVIL)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.PRV_ID_ESTADO_CIVIL }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

@@ -1,0 +1,160 @@
+﻿@model Providencia.Entidades.PRV_EDUCANDO
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2></h2>
+
+<h3>Tem certeza que deseja excluir?</h3>
+<div>
+    <h4>EDUCANDO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_ESTADO_CIVIL.PRV_DESCRICAO_ESTADO_CIVIL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_ESTADO_CIVIL.PRV_DESCRICAO_ESTADO_CIVIL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_MORADIA1.PRV_ID_MORADIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_MORADIA1.PRV_ID_MORADIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_TIPO_DE_FAMILIA.PRV_DESCRICAO_TIPO_DE_FAMILIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_TIPO_DE_FAMILIA.PRV_DESCRICAO_TIPO_DE_FAMILIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_DATA_NASCIMENTO_EDUCANDO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_DATA_NASCIMENTO_EDUCANDO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_NOME_RESPONSAVEL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_NOME_RESPONSAVEL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_TELEFONE_RESPONSAVEL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_TELEFONE_RESPONSAVEL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_NOME_MAE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_NOME_MAE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_TELEFONE_MAE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_TELEFONE_MAE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_NOME_PAI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_NOME_PAI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_TELEFONE_PAI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_TELEFONE_PAI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_TELEFONE_RESIDENCIAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_TELEFONE_RESIDENCIAL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_NOME_RUA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_NOME_RUA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_NUMERO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_NUMERO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_BAIRRO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_BAIRRO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_CEP)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_CEP)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_NA_AUSENCIA_RESPONSAVEL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_NA_AUSENCIA_RESPONSAVEL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_NOME_EDUCANDO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_NOME_EDUCANDO)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar", "Index")
+        </div>
+    }
+</div>

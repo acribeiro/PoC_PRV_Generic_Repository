@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Providencia.Entidades.PRV_GRUPO_TERAPEUTICO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2></h2>
+
+<p>
+    @Html.ActionLink("Novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_NOME_GRUPO_TERAPEUTICO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_ENDEREÇO_GRUPO_TERAPEUTICO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_NOME_GRUPO_TERAPEUTICO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_ENDEREÇO_GRUPO_TERAPEUTICO)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.PRV_ID_GRUPO_TERAPEUTICO }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.PRV_ID_GRUPO_TERAPEUTICO }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.PRV_ID_GRUPO_TERAPEUTICO })
+        </td>
+    </tr>
+}
+
+</table>

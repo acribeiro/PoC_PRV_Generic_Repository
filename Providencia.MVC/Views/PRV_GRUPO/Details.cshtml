@@ -1,0 +1,26 @@
+﻿@model Providencia.Entidades.PRV_GRUPO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>GRUPO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_NOME_GRUPO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_NOME_GRUPO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.PRV_ID_GRUPO }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

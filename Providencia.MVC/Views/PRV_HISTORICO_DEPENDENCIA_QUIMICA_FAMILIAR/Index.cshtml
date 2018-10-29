@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Providencia.Entidades.PRV_HISTORICO_DEPENDENCIA_QUIMICA_FAMILIAR>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2></h2>
+
+<p>
+    @Html.ActionLink("Novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_CONSTITUICAO_FAMILIAR.PRV_NOME_MEMBRO_FAMILIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_EXISTE_HISTORICO_DEPENDENCIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_FEZ_TRATAMENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_LOCAL_TRATAMENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_TEMPO_TRATAMENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_FAZ_USO_MEDICAMENTO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_NOME_MEDICAMENTO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_CONSTITUICAO_FAMILIAR.PRV_NOME_MEMBRO_FAMILIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_EXISTE_HISTORICO_DEPENDENCIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_FEZ_TRATAMENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_LOCAL_TRATAMENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_TEMPO_TRATAMENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_FAZ_USO_MEDICAMENTO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_NOME_MEDICAMENTO)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.PRV_ID_HISTORICO_DEPENDENCIA }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.PRV_ID_HISTORICO_DEPENDENCIA }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.PRV_ID_HISTORICO_DEPENDENCIA })
+        </td>
+    </tr>
+}
+
+</table>

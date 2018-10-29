@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9BE391D0-2547-4928-860F-B5D20D67F47C}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Providencia.MVC</RootNamespace>
+    <AssemblyName>Providencia.MVC</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.5.0.2, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.8.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.6.5135.21930, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PRV_BENEFICIOSController.cs" />
+    <Compile Include="Controllers\PRV_BENEFICIOS_FAMILIAController.cs" />
+    <Compile Include="Controllers\PRV_CONSTITUICAO_FAMILIARController.cs" />
+    <Compile Include="Controllers\PRV_DADOS_ESCOLARES_FAMILIAController.cs" />
+    <Compile Include="Controllers\PRV_DESPESA_FAMILIARController.cs" />
+    <Compile Include="Controllers\PRV_EDUCANDOController.cs" />
+    <Compile Include="Controllers\PRV_ESCOLARIDADEController.cs" />
+    <Compile Include="Controllers\PRV_ESCOLARIDADE_EDUCANDOController.cs" />
+    <Compile Include="Controllers\PRV_ESTADO_CIVILController.cs" />
+    <Compile Include="Controllers\PRV_GRUPOController.cs" />
+    <Compile Include="Controllers\PRV_GRUPO_TERAPEUTICOController.cs" />
+    <Compile Include="Controllers\PRV_HISTORICO_DEPENDENCIA_QUIMICA_FAMILIARController.cs" />
+    <Compile Include="Controllers\PRV_MORADIAController.cs" />
+    <Compile Include="Controllers\PRV_MORADORES_RESIDENCIA_EDUCANDOController.cs" />
+    <Compile Include="Controllers\PRV_RENDA_FAMILIARController.cs" />
+    <Compile Include="Controllers\PRV_ROTINA_DAS_CRIANCAS_ADOLESCENTE_NUCLEO_FAMILIARController.cs" />
+    <Compile Include="Controllers\PRV_TIPO_DE_FAMILIAController.cs" />
+    <Compile Include="Controllers\PRV_TIPO_MORADIAController.cs" />
+    <Compile Include="Controllers\PRV_UNIDADEController.cs" />
+    <Compile Include="Controllers\PRV_USUARIOController.cs" />
+    <Compile Include="Controllers\PRV_VIOLENCIA_NA_FAMILIAController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\cssLogin.css" />
+    <Content Include="Content\jqueryUI\jquery-ui.css" />
+    <Content Include="Content\jqueryUI\jquery-ui.min.css" />
+    <Content Include="Content\jqueryUI\jquery-ui.structure.css" />
+    <Content Include="Content\jqueryUI\jquery-ui.structure.min.css" />
+    <Content Include="Content\jqueryUI\jquery-ui.theme.css" />
+    <Content Include="Content\jqueryUI\jquery-ui.theme.min.css" />
+    <Content Include="Content\justified-nav.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="Image\prov.png" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\inputmask\bindings\inputmask.binding.js" />
+    <Content Include="Scripts\inputmask\bindings\inputmask.binding.min.js" />
+    <Content Include="Scripts\inputmask\dependencyLibs\inputmask.dependencyLib.jqlite.js" />
+    <Content Include="Scripts\inputmask\dependencyLibs\inputmask.dependencyLib.jqlite.min.js" />
+    <Content Include="Scripts\inputmask\dependencyLibs\inputmask.dependencyLib.jquery.js" />
+    <Content Include="Scripts\inputmask\dependencyLibs\inputmask.dependencyLib.jquery.min.js" />
+    <Content Include="Scripts\inputmask\dependencyLibs\inputmask.dependencyLib.js" />
+    <Content Include="Scripts\inputmask\dependencyLibs\inputmask.dependencyLib.min.js" />
+    <Content Include="Scripts\inputmask\global\document.js" />
+    <Content Include="Scripts\inputmask\global\document.min.js" />
+    <Content Include="Scripts\inputmask\global\window.js" />
+    <Content Include="Scripts\inputmask\global\window.min.js" />
+    <Content Include="Scripts\inputmask\inputmask.date.extensions.js" />
+    <Content Include="Scripts\inputmask\inputmask.date.extensions.min.js" />
+    <Content Include="Scripts\inputmask\inputmask.extensions.js" />
+    <Content Include="Scripts\inputmask\inputmask.extensions.min.js" />
+    <Content Include="Scripts\inputmask\inputmask.js" />
+    <Content Include="Scripts\inputmask\inputmask.min.js" />
+    <Content Include="Scripts\inputmask\inputmask.numeric.extensions.js" />
+    <Content Include="Scripts\inputmask\inputmask.numeric.extensions.min.js" />
+    <Content Include="Scripts\inputmask\inputmask.phone.extensions.js" />
+    <Content Include="Scripts\inputmask\inputmask.phone.extensions.min.js" />
+    <Content Include="Scripts\inputmask\inputmask.regex.extensions.js" />
+    <Content Include="Scripts\inputmask\inputmask.regex.extensions.min.js" />
+    <Content Include="Scripts\inputmask\jquery.inputmask.js" />
+    <Content Include="Scripts\inputmask\jquery.inputmask.min.js" />
+    <Content Include="Scripts\inputmask\jquery.maskedinput.js" />
+    <Content Include="Scripts\inputmask\maskedinput-binder.js" />
+    <Content Include="Scripts\inputmask\phone-codes\phone-be.js" />
+    <Content Include="Scripts\inputmask\phone-codes\phone-be.min.js" />
+    <Content Include="Scripts\inputmask\phone-codes\phone-nl.js" />
+    <Content Include="Scripts\inputmask\phone-codes\phone-nl.min.js" />
+    <Content Include="Scripts\inputmask\phone-codes\phone-ru.js" />
+    <Content Include="Scripts\inputmask\phone-codes\phone-ru.min.js" />
+    <Content Include="Scripts\inputmask\phone-codes\phone-uk.js" />
+    <Content Include="Scripts\inputmask\phone-codes\phone-uk.min.js" />
+    <Content Include="Scripts\inputmask\phone-codes\phone.js" />
+    <Content Include="Scripts\inputmask\phone-codes\phone.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.js" />
+    <Content Include="Scripts\jquery-3.2.1.min.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.js" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.inputmask.bundle.js" />
+    <Content Include="Scripts\jquery.inputmask.bundle.min.js" />
+    <Content Include="Scripts\jquery.maskedinput.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\respond.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.js" />
+    <Content Include="Scripts\respond.matchmedia.addListener.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\PRV_BENEFICIOS\Create.cshtml" />
+    <Content Include="Views\PRV_BENEFICIOS\Delete.cshtml" />
+    <Content Include="Views\PRV_BENEFICIOS\Details.cshtml" />
+    <Content Include="Views\PRV_BENEFICIOS\Edit.cshtml" />
+    <Content Include="Views\PRV_BENEFICIOS\Index.cshtml" />
+    <Content Include="Views\PRV_BENEFICIOS_FAMILIA\Create.cshtml" />
+    <Content Include="Views\PRV_BENEFICIOS_FAMILIA\Delete.cshtml" />
+    <Content Include="Views\PRV_BENEFICIOS_FAMILIA\Details.cshtml" />
+    <Content Include="Views\PRV_BENEFICIOS_FAMILIA\Edit.cshtml" />
+    <Content Include="Views\PRV_BENEFICIOS_FAMILIA\Index.cshtml" />
+    <Content Include="Views\PRV_DESPESA_FAMILIAR\Create.cshtml" />
+    <Content Include="Views\PRV_DESPESA_FAMILIAR\Delete.cshtml" />
+    <Content Include="Views\PRV_DESPESA_FAMILIAR\Details.cshtml" />
+    <Content Include="Views\PRV_DESPESA_FAMILIAR\Edit.cshtml" />
+    <Content Include="Views\PRV_DESPESA_FAMILIAR\Index.cshtml" />
+    <Content Include="Views\PRV_ESTADO_CIVIL\Create.cshtml" />
+    <Content Include="Views\PRV_ESTADO_CIVIL\Delete.cshtml" />
+    <Content Include="Views\PRV_ESTADO_CIVIL\Details.cshtml" />
+    <Content Include="Views\PRV_ESTADO_CIVIL\Edit.cshtml" />
+    <Content Include="Views\PRV_ESTADO_CIVIL\Index.cshtml" />
+    <Content Include="Views\PRV_GRUPO\Create.cshtml" />
+    <Content Include="Views\PRV_GRUPO\Delete.cshtml" />
+    <Content Include="Views\PRV_GRUPO\Details.cshtml" />
+    <Content Include="Views\PRV_GRUPO\Edit.cshtml" />
+    <Content Include="Views\PRV_GRUPO\Index.cshtml" />
+    <Content Include="Views\PRV_RENDA_FAMILIAR\Create.cshtml" />
+    <Content Include="Views\PRV_RENDA_FAMILIAR\Delete.cshtml" />
+    <Content Include="Views\PRV_RENDA_FAMILIAR\Details.cshtml" />
+    <Content Include="Views\PRV_RENDA_FAMILIAR\Edit.cshtml" />
+    <Content Include="Views\PRV_RENDA_FAMILIAR\Index.cshtml" />
+    <Content Include="Views\PRV_ESCOLARIDADE\Create.cshtml" />
+    <Content Include="Views\PRV_ESCOLARIDADE\Delete.cshtml" />
+    <Content Include="Views\PRV_ESCOLARIDADE\Details.cshtml" />
+    <Content Include="Views\PRV_ESCOLARIDADE\Edit.cshtml" />
+    <Content Include="Views\PRV_ESCOLARIDADE\Index.cshtml" />
+    <Content Include="Views\PRV_TIPO_MORADIA\Create.cshtml" />
+    <Content Include="Views\PRV_TIPO_MORADIA\Delete.cshtml" />
+    <Content Include="Views\PRV_TIPO_MORADIA\Details.cshtml" />
+    <Content Include="Views\PRV_TIPO_MORADIA\Edit.cshtml" />
+    <Content Include="Views\PRV_TIPO_MORADIA\Index.cshtml" />
+    <Content Include="Views\PRV_CONSTITUICAO_FAMILIAR\Create.cshtml" />
+    <Content Include="Views\PRV_CONSTITUICAO_FAMILIAR\Delete.cshtml" />
+    <Content Include="Views\PRV_CONSTITUICAO_FAMILIAR\Details.cshtml" />
+    <Content Include="Views\PRV_CONSTITUICAO_FAMILIAR\Edit.cshtml" />
+    <Content Include="Views\PRV_CONSTITUICAO_FAMILIAR\Index.cshtml" />
+    <Content Include="Views\PRV_ESCOLARIDADE_EDUCANDO\Create.cshtml" />
+    <Content Include="Views\PRV_ESCOLARIDADE_EDUCANDO\Delete.cshtml" />
+    <Content Include="Views\PRV_ESCOLARIDADE_EDUCANDO\Details.cshtml" />
+    <Content Include="Views\PRV_ESCOLARIDADE_EDUCANDO\Edit.cshtml" />
+    <Content Include="Views\PRV_ESCOLARIDADE_EDUCANDO\Index.cshtml" />
+    <Content Include="Views\PRV_EDUCANDO\Create.cshtml" />
+    <Content Include="Views\PRV_EDUCANDO\Delete.cshtml" />
+    <Content Include="Views\PRV_EDUCANDO\Details.cshtml" />
+    <Content Include="Views\PRV_EDUCANDO\Edit.cshtml" />
+    <Content Include="Views\PRV_EDUCANDO\Index.cshtml" />
+    <Content Include="Views\PRV_DADOS_ESCOLARES_FAMILIA\Create.cshtml" />
+    <Content Include="Views\PRV_DADOS_ESCOLARES_FAMILIA\Delete.cshtml" />
+    <Content Include="Views\PRV_DADOS_ESCOLARES_FAMILIA\Details.cshtml" />
+    <Content Include="Views\PRV_DADOS_ESCOLARES_FAMILIA\Edit.cshtml" />
+    <Content Include="Views\PRV_DADOS_ESCOLARES_FAMILIA\Index.cshtml" />
+    <Content Include="Views\PRV_GRUPO_TERAPEUTICO\Create.cshtml" />
+    <Content Include="Views\PRV_GRUPO_TERAPEUTICO\Delete.cshtml" />
+    <Content Include="Views\PRV_GRUPO_TERAPEUTICO\Details.cshtml" />
+    <Content Include="Views\PRV_GRUPO_TERAPEUTICO\Edit.cshtml" />
+    <Content Include="Views\PRV_GRUPO_TERAPEUTICO\Index.cshtml" />
+    <Content Include="Views\PRV_HISTORICO_DEPENDENCIA_QUIMICA_FAMILIAR\Create.cshtml" />
+    <Content Include="Views\PRV_HISTORICO_DEPENDENCIA_QUIMICA_FAMILIAR\Delete.cshtml" />
+    <Content Include="Views\PRV_HISTORICO_DEPENDENCIA_QUIMICA_FAMILIAR\Details.cshtml" />
+    <Content Include="Views\PRV_HISTORICO_DEPENDENCIA_QUIMICA_FAMILIAR\Edit.cshtml" />
+    <Content Include="Views\PRV_HISTORICO_DEPENDENCIA_QUIMICA_FAMILIAR\Index.cshtml" />
+    <Content Include="Views\PRV_MORADIA\Create.cshtml" />
+    <Content Include="Views\PRV_MORADIA\Delete.cshtml" />
+    <Content Include="Views\PRV_MORADIA\Details.cshtml" />
+    <Content Include="Views\PRV_MORADIA\Edit.cshtml" />
+    <Content Include="Views\PRV_MORADIA\Index.cshtml" />
+    <Content Include="Views\PRV_MORADORES_RESIDENCIA_EDUCANDO\Create.cshtml" />
+    <Content Include="Views\PRV_MORADORES_RESIDENCIA_EDUCANDO\Delete.cshtml" />
+    <Content Include="Views\PRV_MORADORES_RESIDENCIA_EDUCANDO\Details.cshtml" />
+    <Content Include="Views\PRV_MORADORES_RESIDENCIA_EDUCANDO\Edit.cshtml" />
+    <Content Include="Views\PRV_MORADORES_RESIDENCIA_EDUCANDO\Index.cshtml" />
+    <Content Include="Views\PRV_TIPO_DE_FAMILIA\Create.cshtml" />
+    <Content Include="Views\PRV_TIPO_DE_FAMILIA\Delete.cshtml" />
+    <Content Include="Views\PRV_TIPO_DE_FAMILIA\Details.cshtml" />
+    <Content Include="Views\PRV_TIPO_DE_FAMILIA\Edit.cshtml" />
+    <Content Include="Views\PRV_TIPO_DE_FAMILIA\Index.cshtml" />
+    <Content Include="Views\PRV_UNIDADE\Create.cshtml" />
+    <Content Include="Views\PRV_UNIDADE\Delete.cshtml" />
+    <Content Include="Views\PRV_UNIDADE\Details.cshtml" />
+    <Content Include="Views\PRV_UNIDADE\Edit.cshtml" />
+    <Content Include="Views\PRV_UNIDADE\Index.cshtml" />
+    <Content Include="Views\PRV_USUARIO\Create.cshtml" />
+    <Content Include="Views\PRV_USUARIO\Delete.cshtml" />
+    <Content Include="Views\PRV_USUARIO\Details.cshtml" />
+    <Content Include="Views\PRV_USUARIO\Edit.cshtml" />
+    <Content Include="Views\PRV_USUARIO\Index.cshtml" />
+    <Content Include="Views\PRV_VIOLENCIA_NA_FAMILIA\Create.cshtml" />
+    <Content Include="Views\PRV_VIOLENCIA_NA_FAMILIA\Delete.cshtml" />
+    <Content Include="Views\PRV_VIOLENCIA_NA_FAMILIA\Details.cshtml" />
+    <Content Include="Views\PRV_VIOLENCIA_NA_FAMILIA\Edit.cshtml" />
+    <Content Include="Views\PRV_VIOLENCIA_NA_FAMILIA\Index.cshtml" />
+    <Content Include="Views\PRV_ROTINA_DAS_CRIANCAS_ADOLESCENTE_NUCLEO_FAMILIAR\Create.cshtml" />
+    <Content Include="Views\PRV_ROTINA_DAS_CRIANCAS_ADOLESCENTE_NUCLEO_FAMILIAR\Delete.cshtml" />
+    <Content Include="Views\PRV_ROTINA_DAS_CRIANCAS_ADOLESCENTE_NUCLEO_FAMILIAR\Details.cshtml" />
+    <Content Include="Views\PRV_ROTINA_DAS_CRIANCAS_ADOLESCENTE_NUCLEO_FAMILIAR\Edit.cshtml" />
+    <Content Include="Views\PRV_ROTINA_DAS_CRIANCAS_ADOLESCENTE_NUCLEO_FAMILIAR\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Account\" />
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\Login\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <None Include="Project_Readme.html" />
+    <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.2.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Providencia.DAL\Providencia.DAL.csproj">
+      <Project>{7f8fb1c4-f2c7-4203-91ad-07914fd888b3}</Project>
+      <Name>Providencia.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Providencia.Entidades\Providencia.Entidades.csproj">
+      <Project>{4a07d2f3-22c9-478f-9440-2e61b3273b20}</Project>
+      <Name>Providencia.Entidades</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>23700</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:23700/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.4.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.8\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

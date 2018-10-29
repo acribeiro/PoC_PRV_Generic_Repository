@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Providencia.Entidades.PRV_UNIDADE>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2></h2>
+
+<p>
+    @Html.ActionLink("Novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th class="col-lg-2">
+            @Html.DisplayNameFor(model => model.PRV_NOME_UNIDADE)
+        </th>
+        <th class="col-lg-2">
+            @Html.DisplayNameFor(model => model.PRV_CNPJ_UNIDADE)
+        </th>
+        <th class="col-lg-2">
+            @Html.DisplayNameFor(model => model.PRV_CEP_UNIDADE)
+        </th>
+        <th class="col-lg-2">
+            @Html.DisplayNameFor(model => model.PRV_ENDEREÇO_UNIDADE)
+        </th>
+        <th class="col-lg-2">
+            @Html.DisplayNameFor(model => model.PRV_EMAIL_UNIDADE)
+        </th>
+        <th class="col-lg-2">
+            @Html.DisplayNameFor(model => model.PRV_TELEFONE_UNIDADE)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_NOME_UNIDADE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_CNPJ_UNIDADE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_CEP_UNIDADE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_ENDEREÇO_UNIDADE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_EMAIL_UNIDADE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_TELEFONE_UNIDADE)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.PRV_ID_UNIDADE }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.PRV_ID_UNIDADE }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.PRV_ID_UNIDADE })
+        </td>
+    </tr>
+}
+
+</table>

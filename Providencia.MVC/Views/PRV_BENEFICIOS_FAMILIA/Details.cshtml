@@ -1,0 +1,34 @@
+﻿@model Providencia.Entidades.PRV_BENEFICIOS_FAMILIA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>PRV_BENEFICIOS_FAMILIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_BENEFICIOS.PRV_DESCRICAO_BENEFICIOS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_BENEFICIOS.PRV_DESCRICAO_BENEFICIOS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_CONSTITUICAO_FAMILIAR.PRV_NOME_MEMBRO_FAMILIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_CONSTITUICAO_FAMILIAR.PRV_NOME_MEMBRO_FAMILIA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.PRV_ID_BENEFICIOS_FAMILIA }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

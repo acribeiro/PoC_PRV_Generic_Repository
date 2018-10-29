@@ -1,0 +1,82 @@
+﻿@model Providencia.Entidades.PRV_MORADIA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>MORADIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_EDUCANDO.PRV_NOME_RESPONSAVEL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_EDUCANDO.PRV_NOME_RESPONSAVEL)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_TIPO_MORADIA.PRV_DESCRICAO_TIPO_MORADIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_TIPO_MORADIA.PRV_DESCRICAO_TIPO_MORADIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_QUANTIDADE_QUARTOS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_QUANTIDADE_QUARTOS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_QUANTIDADE_SALAS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_QUANTIDADE_SALAS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_QUANTIDADE_BANHEIROS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_QUANTIDADE_BANHEIROS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_QUANTIDADE_COZINHAS)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_QUANTIDADE_COZINHAS)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_QUANTIDADE_AREA_DE_SERVICO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_QUANTIDADE_AREA_DE_SERVICO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_QUANTIDADE_QUINTAL)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_QUANTIDADE_QUINTAL)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.PRV_ID_MORADIA }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

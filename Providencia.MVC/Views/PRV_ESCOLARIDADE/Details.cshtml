@@ -1,0 +1,26 @@
+﻿@model Providencia.Entidades.PRV_ESCOLARIDADE
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>ESCOLARIDADE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_DESCRICAO_ESCOLARIDADE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_DESCRICAO_ESCOLARIDADE)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.PRV_ID_ESCOLARIDADE }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

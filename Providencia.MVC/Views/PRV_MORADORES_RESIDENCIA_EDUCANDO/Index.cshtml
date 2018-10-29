@@ -1,0 +1,63 @@
+﻿@model IEnumerable<Providencia.Entidades.PRV_MORADORES_RESIDENCIA_EDUCANDO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2></h2>
+
+<p>
+    @Html.ActionLink("Novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_CONSTITUICAO_FAMILIAR.PRV_NOME_MEMBRO_FAMILIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_VACINACAO_EM_DIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_POSSUI_ACOMPANHAMENTO_MEDICO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_DESCRIACAO_POSSUI_ACOMPANHAMENTO_MEDICO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_PARTICIPA_DO_PROJETO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_DESCRIACAO_PARTICIPA_DO_PROJETO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_CONSTITUICAO_FAMILIAR.PRV_NOME_MEMBRO_FAMILIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_VACINACAO_EM_DIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_POSSUI_ACOMPANHAMENTO_MEDICO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_DESCRIACAO_POSSUI_ACOMPANHAMENTO_MEDICO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_PARTICIPA_DO_PROJETO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_DESCRIACAO_PARTICIPA_DO_PROJETO)
+        </td>
+        <td class="col-lg-3">
+            @Html.ActionLink("Editar", "Edit", new { id=item.PRV_ID_MORADORES_RESIDENCIA_EDUCANDO }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.PRV_ID_MORADORES_RESIDENCIA_EDUCANDO }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.PRV_ID_MORADORES_RESIDENCIA_EDUCANDO })
+        </td>
+    </tr>
+}
+
+</table>

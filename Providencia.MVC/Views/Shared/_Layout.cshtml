@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - Projeto Providência</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    
+    @Styles.Render("~/Content/jqueryUI/jquery-ui.css")
+    @Styles.Render("~/Content/jqueryUI/jquery-ui.structure.css")
+    @Styles.Render("~/Content/jqueryUI/jquery-ui.theme.css")
+
+</head>
+<body>
+
+    @*<div class="container">
+            <div class="masthead">
+                <h3 class="text-muted">@Html.ActionLink("Application Name", "Index", "Home")</h3>
+                <ul class="nav nav-justified">
+                    <li>@Html.ActionLink("Home", "Index", "Home", null, new { @class = "active" })</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>*@
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Projeto Providência", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    @*<li>
+                            @Html.ActionLink("Home", "Index", "Home")
+                        </li>*@
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                            Cadastros
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Benefícios", "Index", "PRV_BENEFICIOS")</li>
+                            <li>@Html.ActionLink("Escolaridade", "Index", "PRV_ESCOLARIDADE")</li>
+                            <li>@Html.ActionLink("Estado Civil", "Index", "PRV_ESTADO_CIVIL")</li>
+                            <li>@Html.ActionLink("Grupo", "Index", "PRV_GRUPO")</li>
+                            <li>@Html.ActionLink("Renda Familiar", "Index", "PRV_RENDA_FAMILIAR")</li>
+                            <li>@Html.ActionLink("Tipo de Família", "Index", "PRV_TIPO_DE_FAMILIA")</li>
+                            <li>@Html.ActionLink("Unidade", "Index", "PRV_UNIDADE")</li>
+                            <li>@Html.ActionLink("Usuário", "Index", "PRV_USUARIO")</li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-plus-sign"></span>
+                            Educando
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Constituição Familiar", "Index", "PRV_CONSTITUICAO_FAMILIAR")</li>
+                            <li>@Html.ActionLink("Dados Escolares", "Index", "PRV_DADOS_ESCOLARES_FAMILIA")</li>
+                            <li>@Html.ActionLink("Educando", "Index", "PRV_EDUCANDO")</li>
+                            <li>@Html.ActionLink("Escolaridade do Educando", "Index", "PRV_ESCOLARIDADE_EDUCANDO")</li>
+                            <li>@Html.ActionLink("Grupo Terapetico", "Index", "PRV_GRUPO_TERAPEUTICO")</li>
+                            <li>@Html.ActionLink("Histórico Dependência Química", "Index", "PRV_HISTORICO_DEPENDENCIA_QUIMICA_FAMILIAR")</li>
+                            <li>@Html.ActionLink("Moradia", "Index", "PRV_MORADIA")</li>
+                            <li>@Html.ActionLink("Moradores Residência Educando", "Index", "PRV_MORADORES_RESIDENCIA_EDUCANDO")</li>
+                            <li>@Html.ActionLink("Rotina das Crianças", "Index", "PRV_ROTINA_DAS_CRIANCAS_ADOLESCENTE_NUCLEO_FAMILIAR")</li>
+                        </ul>
+                    </li>
+                    @*<li>
+                            @Html.ActionLink("Contact", "Contact", "Home")
+                        </li>*@
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    @*<p aling="center">
+            <div class="navbar-collapse collapse ">
+                <ul class="nav navbar-nav">
+                    <br />
+                    <div class="btn-group">
+                        <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" padding-left="60px">
+                            Cadastros
+                            <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>@Html.ActionLink("Benefícios", "Index", "PRV_BENEFICIOS")</li>
+                            <li>@Html.ActionLink("Escolaridade", "Index", "PRV_ESCOLARIDADE")</li>
+                            <li>@Html.ActionLink("Estado Civil", "Index", "PRV_ESTADO_CIVIL")</li>
+                            <li>@Html.ActionLink("Grupo", "Index", "PRV_GRUPO")</li>
+                            <li>@Html.ActionLink("Moradia", "Index", "PRV_MORADIA")</li>
+                            <li>@Html.ActionLink("Renda Familiar", "Index", "PRV_RENDA_FAMILIAR")</li>
+                            <li>@Html.ActionLink("Tipo de Família", "Index", "PRV_TIPO_DE_FAMILIA")</li>
+                            <li>@Html.ActionLink("Unidade", "Index", "PRV_UNIDADE")</li>
+                            <li>@Html.ActionLink("Usuário", "Index", "PRV_USUARIO")</li>
+                        </ul>
+
+                    </div>
+                </ul>
+                <div class="navbar-collapse collapse" align="center">
+                    <ul class="nav navbar-nav">
+                        <br />
+                        <div class="btn-group">
+                            <div align="center">
+                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" padding-left:60em>
+                                    Educando
+                                    <span class="caret"></span>
+                                </button>
+                            </div>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Educando", "Index", "PRV_EDUCANDO")</li>
+                                <li>@Html.ActionLink("Constituição Familiar", "Index", "PRV_CONSTITUICAO_FAMILIAR")</li>
+                                <li>@Html.ActionLink("Dados Escolares", "Index", "PRV_DADOS_ESCOLARES_FAMILIA")</li>
+                                <li>@Html.ActionLink("Educando", "Index", "PRV_EDUCANDO")</li>
+                                <li>@Html.ActionLink("Escolaridade do Educando", "Index", "PRV_ESCOLARIDADE_EDUCANDO")</li>
+                                <li>@Html.ActionLink("Grupo Terapetico", "Index", "PRV_GRUPO_TERAPEUTICO")</li>
+                                <li>@Html.ActionLink("Histórico Dependência Química", "Index", "PRV_HISTORICO_DEPENDENCIA_QUIMICA_FAMILIAR")</li>
+                                <li>@Html.ActionLink("Moradia", "Index", "PRV_MORADIA")</li>
+                                <li>@Html.ActionLink("Moradores Residência Educando", "Index", "PRV_MORADORES_RESIDENCIA_EDUCANDO")</li>
+                                <li>@Html.ActionLink("Rotina das Crianças", "Index", "PRV_ROTINA_DAS_CRIANCAS_ADOLESCENTE_NUCLEO_FAMILIAR")</li>
+                            </ul>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </p>*@
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - Projeto Providência</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/inputmask")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,66 @@
+﻿@model Providencia.Entidades.PRV_UNIDADE
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>UNIDADE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_NOME_UNIDADE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_NOME_UNIDADE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_CNPJ_UNIDADE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_CNPJ_UNIDADE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_CEP_UNIDADE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_CEP_UNIDADE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_ENDEREÇO_UNIDADE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_ENDEREÇO_UNIDADE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_EMAIL_UNIDADE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_EMAIL_UNIDADE)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_TELEFONE_UNIDADE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_TELEFONE_UNIDADE)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.PRV_ID_UNIDADE }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

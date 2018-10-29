@@ -1,0 +1,66 @@
+﻿@model Providencia.Entidades.PRV_MORADORES_RESIDENCIA_EDUCANDO
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>MORADORES DA RESIDÊNCIA DO EDUCANDO</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_CONSTITUICAO_FAMILIAR.PRV_NOME_MEMBRO_FAMILIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_CONSTITUICAO_FAMILIAR.PRV_NOME_MEMBRO_FAMILIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_VACINACAO_EM_DIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_VACINACAO_EM_DIA)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_POSSUI_ACOMPANHAMENTO_MEDICO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_POSSUI_ACOMPANHAMENTO_MEDICO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_DESCRIACAO_POSSUI_ACOMPANHAMENTO_MEDICO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_DESCRIACAO_POSSUI_ACOMPANHAMENTO_MEDICO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_PARTICIPA_DO_PROJETO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_PARTICIPA_DO_PROJETO)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_DESCRIACAO_PARTICIPA_DO_PROJETO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_DESCRIACAO_PARTICIPA_DO_PROJETO)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.PRV_ID_MORADORES_RESIDENCIA_EDUCANDO }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

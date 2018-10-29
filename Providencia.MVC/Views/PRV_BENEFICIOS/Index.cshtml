@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Providencia.Entidades.PRV_BENEFICIOS>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2></h2>
+
+<p>
+    @Html.ActionLink("Novo", "Create")
+</p>
+<table class="table tab">
+    <tr>
+        <th>
+            @Html.DisplayName("Benefício")
+            @* @Html.DisplayName("Benefício")*@
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.PRV_DESCRICAO_BENEFICIOS)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.PRV_ID_BENEFICIOS }) |
+                @Html.ActionLink("Detalhes", "Details", new { id = item.PRV_ID_BENEFICIOS }) |
+                @Html.ActionLink("Excluir", "Delete", new { id = item.PRV_ID_BENEFICIOS })
+            </td>
+        </tr>
+    }
+
+</table>

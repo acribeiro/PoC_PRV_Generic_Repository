@@ -1,0 +1,30 @@
+c:\users\alan.ribeiro\documents\visual studio 2015\Projects\Providencia.Repositorio\Providencia.DAL\bin\Debug\Providencia.DAL.dll.config
+c:\users\alan.ribeiro\documents\visual studio 2015\Projects\Providencia.Repositorio\Providencia.DAL\bin\Debug\Providencia.DAL.dll
+c:\users\alan.ribeiro\documents\visual studio 2015\Projects\Providencia.Repositorio\Providencia.DAL\bin\Debug\Providencia.DAL.pdb
+c:\users\alan.ribeiro\documents\visual studio 2015\Projects\Providencia.Repositorio\Providencia.DAL\bin\Debug\EntityFramework.dll
+c:\users\alan.ribeiro\documents\visual studio 2015\Projects\Providencia.Repositorio\Providencia.DAL\bin\Debug\EntityFramework.SqlServer.dll
+c:\users\alan.ribeiro\documents\visual studio 2015\Projects\Providencia.Repositorio\Providencia.DAL\bin\Debug\Providencia.Entidades.dll
+c:\users\alan.ribeiro\documents\visual studio 2015\Projects\Providencia.Repositorio\Providencia.DAL\bin\Debug\Providencia.Entidades.pdb
+c:\users\alan.ribeiro\documents\visual studio 2015\Projects\Providencia.Repositorio\Providencia.DAL\bin\Debug\EntityFramework.xml
+c:\users\alan.ribeiro\documents\visual studio 2015\Projects\Providencia.Repositorio\Providencia.DAL\bin\Debug\EntityFramework.SqlServer.xml
+c:\users\alan.ribeiro\documents\visual studio 2015\Projects\Providencia.Repositorio\Providencia.DAL\obj\Debug\Providencia.DAL.dll
+c:\users\alan.ribeiro\documents\visual studio 2015\Projects\Providencia.Repositorio\Providencia.DAL\obj\Debug\Providencia.DAL.pdb
+C:\Users\alan.ribeiro\Documents\Visual Studio 2015\Projects\Providencia.Repositorio\Providencia.DAL\bin\Debug\Providencia.Entidades.dll.config
+C:\Users\alan.ribeiro\Documents\Visual Studio 2015\Projects\Providencia.Repositorio\Providencia.DAL\obj\Debug\Providencia.DAL.csprojAssemblyReference.cache
+C:\Users\alan.ribeiro\Documents\Visual Studio 2015\Projects\Providencia.Repositorio\Providencia.DAL\obj\Debug\Providencia.DAL.csproj.CoreCompileInputs.cache
+C:\Users\alan.ribeiro\Documents\Visual Studio 2015\Projects\Providencia.Repositorio\Providencia.DAL\obj\Debug\Providencia.DAL.csproj.CopyComplete
+C:\Users\Dell\source\repos\Providencia.Repositorio\Providencia.DAL\bin\Debug\Providencia.DAL.dll.config
+C:\Users\Dell\source\repos\Providencia.Repositorio\Providencia.DAL\bin\Debug\Providencia.DAL.dll
+C:\Users\Dell\source\repos\Providencia.Repositorio\Providencia.DAL\bin\Debug\Providencia.DAL.pdb
+C:\Users\Dell\source\repos\Providencia.Repositorio\Providencia.DAL\bin\Debug\EntityFramework.dll
+C:\Users\Dell\source\repos\Providencia.Repositorio\Providencia.DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Dell\source\repos\Providencia.Repositorio\Providencia.DAL\bin\Debug\Providencia.Entidades.dll
+C:\Users\Dell\source\repos\Providencia.Repositorio\Providencia.DAL\bin\Debug\Providencia.Entidades.pdb
+C:\Users\Dell\source\repos\Providencia.Repositorio\Providencia.DAL\bin\Debug\Providencia.Entidades.dll.config
+C:\Users\Dell\source\repos\Providencia.Repositorio\Providencia.DAL\bin\Debug\EntityFramework.xml
+C:\Users\Dell\source\repos\Providencia.Repositorio\Providencia.DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Dell\source\repos\Providencia.Repositorio\Providencia.DAL\obj\Debug\Providencia.DAL.csprojAssemblyReference.cache
+C:\Users\Dell\source\repos\Providencia.Repositorio\Providencia.DAL\obj\Debug\Providencia.DAL.csproj.CoreCompileInputs.cache
+C:\Users\Dell\source\repos\Providencia.Repositorio\Providencia.DAL\obj\Debug\Providencia.DAL.csproj.CopyComplete
+C:\Users\Dell\source\repos\Providencia.Repositorio\Providencia.DAL\obj\Debug\Providencia.DAL.dll
+C:\Users\Dell\source\repos\Providencia.Repositorio\Providencia.DAL\obj\Debug\Providencia.DAL.pdb

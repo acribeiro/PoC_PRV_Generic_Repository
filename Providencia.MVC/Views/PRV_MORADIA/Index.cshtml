@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Providencia.Entidades.PRV_MORADIA>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2></h2>
+
+<p>
+    @Html.ActionLink("Novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_EDUCANDO.PRV_NOME_RESPONSAVEL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_TIPO_MORADIA.PRV_DESCRICAO_TIPO_MORADIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_QUANTIDADE_QUARTOS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_QUANTIDADE_SALAS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_QUANTIDADE_BANHEIROS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_QUANTIDADE_COZINHAS)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_QUANTIDADE_AREA_DE_SERVICO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_QUANTIDADE_QUINTAL)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_EDUCANDO.PRV_NOME_RESPONSAVEL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_TIPO_MORADIA.PRV_DESCRICAO_TIPO_MORADIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_QUANTIDADE_QUARTOS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_QUANTIDADE_SALAS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_QUANTIDADE_BANHEIROS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_QUANTIDADE_COZINHAS)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_QUANTIDADE_AREA_DE_SERVICO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_QUANTIDADE_QUINTAL)
+        </td>
+        <td class="col-lg-3">
+            @Html.ActionLink("Editar", "Edit", new { id=item.PRV_ID_MORADIA }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.PRV_ID_MORADIA }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.PRV_ID_MORADIA })
+        </td>
+    </tr>
+}
+
+</table>

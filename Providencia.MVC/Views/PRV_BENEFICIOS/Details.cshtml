@@ -1,0 +1,26 @@
+﻿@model Providencia.Entidades.PRV_BENEFICIOS
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2></h2>
+
+<div>
+    <h4>BENEFÍCIOS</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+             @Html.DisplayName("Benefício")
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_DESCRICAO_BENEFICIOS)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.PRV_ID_BENEFICIOS }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

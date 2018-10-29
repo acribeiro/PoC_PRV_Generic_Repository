@@ -1,0 +1,26 @@
+﻿@model Providencia.Entidades.PRV_TIPO_MORADIA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>PRV_TIPO_MORADIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.PRV_DESCRICAO_TIPO_MORADIA)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PRV_DESCRICAO_TIPO_MORADIA)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.PRV_ID_TIPO_MORADIA }) |
+    @Html.ActionLink("Voltar", "Index")
+</p>

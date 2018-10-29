@@ -1,0 +1,129 @@
+﻿@model IEnumerable<Providencia.Entidades.PRV_EDUCANDO>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2></h2>
+
+<p>
+    @Html.ActionLink("Novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_ESTADO_CIVIL.PRV_DESCRICAO_ESTADO_CIVIL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_MORADIA1.PRV_ID_MORADIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_TIPO_DE_FAMILIA.PRV_DESCRICAO_TIPO_DE_FAMILIA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_DATA_NASCIMENTO_EDUCANDO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_NOME_RESPONSAVEL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_TELEFONE_RESPONSAVEL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_NOME_MAE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_TELEFONE_MAE)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_NOME_PAI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_TELEFONE_PAI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_TELEFONE_RESIDENCIAL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_NOME_RUA)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_NUMERO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_BAIRRO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_CEP)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_NA_AUSENCIA_RESPONSAVEL)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PRV_NOME_EDUCANDO)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_ESTADO_CIVIL.PRV_DESCRICAO_ESTADO_CIVIL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_MORADIA1.PRV_ID_MORADIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_TIPO_DE_FAMILIA.PRV_DESCRICAO_TIPO_DE_FAMILIA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_DATA_NASCIMENTO_EDUCANDO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_NOME_RESPONSAVEL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_TELEFONE_RESPONSAVEL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_NOME_MAE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_TELEFONE_MAE)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_NOME_PAI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_TELEFONE_PAI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_TELEFONE_RESIDENCIAL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_NOME_RUA)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_NUMERO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_BAIRRO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_CEP)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_NA_AUSENCIA_RESPONSAVEL)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PRV_NOME_EDUCANDO)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.PRV_ID_EDUCANDO }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.PRV_ID_EDUCANDO }) |
+            @Html.ActionLink("Excluir", "Delete", new { id=item.PRV_ID_EDUCANDO })
+        </td>
+    </tr>
+}
+
+</table>
